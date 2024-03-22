@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd Graded Exercise</title>
+</head>
+<body>
+    <script>
+        var rng = Math.floor(Math.random() *1001); // generating numbers randomly from 1-1000 and using Math.floor so that no decimals
+        var rngtext = "randomly generated num: ";
+        var text = rngtext.concat(rng);
+        document.write(text + "<br><br>");
+
+        var num1 = rng % 10;
+        var num10 = parseInt((((rng % 100) /10)*10) - num1); 
+        var num100 = parseInt(((rng/100)*100) - (num10 + num1)); 
+
+        document.write(`breakdown: ${num100}, ${num10}, ${num1} <br><br>`);
+
+        var date = new Date ();
+        document.write(date);
+    </script>
+</body>
+</html>
